@@ -1,0 +1,24 @@
+﻿<Window x:Class="UPractice.View.AddFacultyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UPractice.View"
+        xmlns:local1="clr-namespace:UPractice.ViewModel"
+        mc:Ignorable="d"
+        Title="AddFacultyWindow" Height="254.375" Width="272.765">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Добавить" Margin="0,175,10,0"
+                Command="{Binding AddFaculty}" Click="Button_Click" Height="38" VerticalAlignment="Top" HorizontalAlignment="Right" Width="245"/>
+        <Label Content="Name of Faculty" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.469,0.448" Height="26" Width="99"/>
+        <TextBox Height="23" Margin="0,0,10,159" TextWrapping="Wrap" VerticalAlignment="Bottom"
+                 Text="{Binding NameFaculty}" x:Name="NameField" HorizontalAlignment="Right" Width="245"/>
+        <Label Content="Short name of Faculty" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.469,0.448" Height="26" Width="132"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,105" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="245"
+                 Text="{Binding ShortNameFaculty}"/>
+    </Grid>
+</Window>
